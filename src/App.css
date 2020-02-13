@@ -1,38 +1,167 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Lato|Sriracha&display=swap");
+* {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+body {
+  background: #74ebd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #acb6e5,
+    #74ebd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #acb6e5,
+    #74ebd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Sriracha", cursive;
+  font-size: 14px;
+}
+.container {
+  background-color: #72b3a791;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Select */
+.select {
+  font-family: "Sriracha", cursive;
+  padding: 5px 20px;
+  background: #bddfdb;
+  outline: none;
+  text-align: center;
+  color: rgb(66, 64, 64);
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* category */
+.start__img {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.category__header {
+  font-family: "Amatic SC", cursive;
+  font-size: 70px;
+  padding: 15px;
+}
+.category__header__inner {
+  font-family: "Amatic SC", cursive;
+  font-size: 40px;
+  padding: 20px;
+}
+
+/* Button */
+
+.btn {
+  border: none;
+  background: #2d8b80;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.btn:hover {
+  background: #14574f;
+  transform: scale(1.1);
+}
+
+/*Questions*/
+.question__header {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgb(90, 90, 90);
+}
+.question__seconds {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgb(47, 47, 47);
+}
+.red {
+  color: rgb(175, 29, 29);
+  transform: scale(1.1);
+}
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+.question__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #141817;
+}
+.questions {
+  padding: 10px;
+}
+/* result */
+
+.congrats {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+.sad {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+/* media queries */
+@media (max-width: 550px) {
+  .category__header {
+    font-size: 40px;
   }
 }
